@@ -1,0 +1,23 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <a class="logo" (click)="scrollTo('hero')">
+      <span class="gradient-text">P</span>
+    </a>
+
+    <ul class="nav-links" [class.mobile-open]="isMobileMenuOpen">
+      <li *ngFor="let link of navLinks">
+        <a
+          [class.active]="activeSection === link.section"
+          (click)="scrollTo(link.section)">
+          {{ link.label }}
+        </a>
+      </li>
+    </ul>
+
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="bar" [class.open]="isMobileMenuOpen"></span>
+      <span class="bar" [class.open]="isMobileMenuOpen"></span>
+      <span class="bar" [class.open]="isMobileMenuOpen"></span>
+    </button>
+  </div>
+</nav>

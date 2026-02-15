@@ -1,0 +1,56 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Get to Know Me</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <!-- Left Column - Text -->
+      <div class="about-text" appScrollReveal revealClass="reveal-left">
+        <p class="about-intro">
+          I'm a passionate <span class="highlight">Software Developer</span> with hands-on experience
+          in building robust web applications using modern technologies. I specialize in creating
+          efficient, user-centric solutions that drive business value.
+        </p>
+        <p>
+          My expertise spans developing <span class="highlight">Sales Pipeline Management Systems</span>,
+          <span class="highlight">Channel Management Applications</span>, and data optimization modules.
+          I focus on building role-based access control (RBAC) systems, implementing
+          server-side pagination, and optimizing API performance for seamless user experiences.
+        </p>
+        <p>
+          I thrive in agile environments, collaborating with cross-functional teams to deliver
+          high-quality software on time. From crafting intuitive dashboards to optimizing complex
+          MySQL queries, I bring a detail-oriented approach to every project.
+        </p>
+
+        <!-- Personal Details Card -->
+        <div class="details-card">
+          <h3>Personal Details</h3>
+          <div class="details-list">
+            <div class="detail-item" *ngFor="let detail of details">
+              <mat-icon>{{ detail.icon }}</mat-icon>
+              <div class="detail-content">
+                <span class="detail-label">{{ detail.label }}</span>
+                <span class="detail-value">{{ detail.value }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Stats -->
+      <div class="about-stats" appScrollReveal revealClass="reveal-right">
+        <div class="stats-grid">
+          <div class="stat-card" *ngFor="let stat of stats">
+            <mat-icon class="stat-icon">{{ stat.icon }}</mat-icon>
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

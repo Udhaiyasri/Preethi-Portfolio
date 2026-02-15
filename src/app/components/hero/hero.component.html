@@ -1,0 +1,67 @@
+<section id="hero" class="hero-section">
+  <!-- Floating Particles -->
+  <div class="particles">
+    <div
+      class="particle"
+      *ngFor="let p of particles"
+      [style.left.%]="p.x"
+      [style.top.%]="p.y"
+      [style.width.px]="p.size"
+      [style.height.px]="p.size"
+      [style.animation-duration.s]="p.duration"
+      [style.animation-delay.s]="p.delay">
+    </div>
+  </div>
+
+  <div class="hero-container">
+    <!-- Left Column -->
+    <div class="hero-content" @fadeInUp>
+      <p class="hero-greeting">
+        <span class="wave">👋</span> Hello, I'm
+      </p>
+      <h1 class="hero-name">Preethi</h1>
+      <h2 class="hero-subtitle">Software Developer</h2>
+      <p class="hero-typed">
+        <span class="typed-text">{{ typedText }}</span>
+        <span class="cursor" [class.blink]="typedText.length === fullText.length">|</span>
+      </p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" (click)="scrollTo('projects')">
+          <span>View Projects</span>
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+        <button class="btn btn-outline" (click)="scrollTo('contact')">
+          <span>Contact Me</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Column - Profile Card -->
+    <div class="hero-card" @fadeInRight>
+      <div class="profile-card">
+        <div class="profile-avatar">
+          <span class="avatar-text">P</span>
+        </div>
+        <h3 class="profile-name">Preethi</h3>
+        <p class="profile-role">Software Developer</p>
+        <div class="profile-location">
+          <mat-icon>location_on</mat-icon>
+          <span>India</span>
+        </div>
+        <div class="profile-tags">
+          <span class="profile-tag">Angular</span>
+          <span class="profile-tag">Node.js</span>
+          <span class="profile-tag">PHP</span>
+          <span class="profile-tag">MySQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+  </div>
+</section>
